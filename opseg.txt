@@ -1,0 +1,34 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+double TestFunkcija(int po, int ko)
+
+{
+    int r, brojac;
+    brojac=0;
+    for(int i=po;i<ko+1; i++)
+    {
+        brojac+=1;
+        r=i*i+2*i-5;
+        cout<<"Rezultat za broj" << i << " je " << r << endl;
+        
+    }
+}
+
+int main()
+{
+    int po, ko;
+    
+    restart:
+    cout <<"Unesite pocetak opsega: ";
+    cin>> po;
+    cout <<"Unesite kraj opsega:";
+    cin>>ko;
+    
+    TestFunkcija(po,ko);
+
+return 0;
+
+}
