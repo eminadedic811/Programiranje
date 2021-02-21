@@ -1,0 +1,37 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+string Star_WarsName_Generator(string ime, string prezime, string dprez, string grad)
+{
+    string prvoime, drugoime, StarWarsName;
+    prvoime=ime.substr(0,3);
+    drugoime=prezime.substr(0,2);
+    StarWarsName=prvoime+drugoime;
+    
+    string prvoprezime, drugoprezime, StarWarsLastName;
+    prvoprezime=dprez.substr(0,2);
+    drugoprezime=grad.substr(0,3);
+    StarWarsLastName=prvoprezime+drugoprezime;
+    
+    
+    cout<< "Star Wars ime koje Vam je dodjeljeno: " << StarWarsName << " " << StarWarsLastName << endl;
+    
+}
+
+int main()
+{
+    string ime,prezime, dprez, grad;
+    cout <<"Unesite ime:"<< endl;
+    cin>>ime;
+    cout <<"Unesite prezime" << endl;
+    cin>>prezime;
+    cout<<"Unesite djevojačko prezime majke:" << endl;
+    cin>>dprez;
+    cout<<"Unesite grad rođenja: " << endl;
+    cin>>grad;
+    
+    Star_WarsName_Generator(ime,prezime,dprez,grad);
+    
+}
